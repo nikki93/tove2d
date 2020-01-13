@@ -1,7 +1,7 @@
 -- TÖVE Editor.
 -- (C) 2018 Bernhard Liebl, MIT license.
 
-local matrix = require "../matrix"
+local matrix = require "matrix"
 
 local TransformWidget = {}
 TransformWidget.__index = TransformWidget

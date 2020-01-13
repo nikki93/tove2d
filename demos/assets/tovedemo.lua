@@ -9,7 +9,7 @@ local font = love.graphics.newFont("assets/amatic/Amatic-Bold.ttf", 48)
 local smallFont = love.graphics.newFont("assets/amatic/Amatic-Bold.ttf", 20)
 local logo = love.graphics.newImage("assets/tovelogo.png", {mipmaps = true})
 logo:setFilter("linear", "linear", 1)
-logo:setMipmapFilter("linear")
+--logo:setMipmapFilter("linear")
 
 love.window.setTitle("")
 
@@ -21,7 +21,7 @@ tovedemo.smallFont = smallFont
 function tovedemo.drawBackground()
 	local width = love.graphics.getWidth()
 	local height = love.graphics.getHeight()
-	love.graphics.setBackgroundColor(0.722, 0.898, 0.988)
+	love.graphics.clear(0.722, 0.898, 0.988)
 	love.graphics.setColor(0, 0, 0, 0.2)
 	love.graphics.rectangle("fill", 0, 0, width, height / 2)
 	love.graphics.setColor(1, 1, 1)

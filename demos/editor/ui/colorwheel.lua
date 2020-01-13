@@ -264,11 +264,11 @@ function ColorWheel:__init(opacitySlider)
 	vec4 effect(vec4 _, Image texture, vec2 texture_coords, vec2 screen_coords){
 		float d = length(texture_coords);
 
-		float phi = atan(texture_coords.y, texture_coords.x) / (M_PI * 2);
+		float phi = atan(texture_coords.y, texture_coords.x) / (M_PI * 2.0);
 		vec3 color = hsv2rgb(vec3(phi, 1, 1));
 
-		float alpha = smoothstep(radius - 1, radius + 1, d) *
-			(1.0f - smoothstep(radius + thickness - 1, radius + thickness + 1, d));
+		float alpha = smoothstep(radius - 1.0, radius + 1.0, d) *
+			(1.0 - smoothstep(radius + thickness - 1.0, radius + thickness + 1.0, d));
 
 		return vec4(color, alpha);
 	}

@@ -458,7 +458,7 @@ function Editor:startup()
 	boxy.add(self.rpanel)
 
 	love.filesystem.setIdentity("miniedit")
-	chunk = love.filesystem.load("save.lua")
+	--chunk = love.filesystem.load("save.lua")
 	if chunk then
 		self:restore(chunk)
 	end
